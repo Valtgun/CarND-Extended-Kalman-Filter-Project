@@ -5,15 +5,15 @@ Tools::Tools() {}
 
 Tools::~Tools() {}
 
-VectorXd Tools::CalculateRMSE(const vector<VectorXd> &estimations,
-                              const vector<VectorXd> &ground_truth) {
+Eigen::VectorXd Tools::CalculateRMSE(const std::vector<Eigen::VectorXd> &estimations,
+                              const std::vector<Eigen::VectorXd> &ground_truth) {
   /**
   TODO:
     * Calculate the RMSE here.
   */
 }
 
-MatrixXd Tools::CalculateJacobian(const VectorXd& x_state) {
+Eigen::MatrixXd Tools::CalculateJacobian(const Eigen::VectorXd& x_state) {
   /**
   TODO:
     * Calculate a Jacobian here.
