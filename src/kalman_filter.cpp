@@ -43,6 +43,9 @@ void KalmanFilter::Update(const VectorXd &z) {
 
 void KalmanFilter::UpdateEKF(const VectorXd &z) {
   //update the state by using Extended Kalman Filter equations
+  // check if valid input, return if 0, to prevent division by 0
+  if (x_(0) == 0) return;
+
   //calculate Hj - Jacobian
   MatrixXd Hj = tools_.CalculateJacobian(x_);
   MatrixXd Hjt = Hj.transpose();
